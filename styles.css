@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    max-width: max-content;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Eingabe-Bereich */
+.input-group {
+    display: flex;
+    align-items: flex-end; /* Alle Elemente am unteren Rand ausrichten */
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.input-group input, 
+.input-group select, 
+button {
+    height: 36px; /* Einheitliche Höhe für alle Felder */
+    min-width: 120px;
+}
+
+button {
+    padding: 5px 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* Labels für Eingabefelder */
+#name-label, #option1-label, #option2-label {
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Button Styling */
+.save-button {
+    padding: 8px 12px;
+    background-color: #1498a18c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+    margin-left: auto; /* Button nach rechts schieben */
+}
+
+.save-button:hover {
+    background-color: #216788;
+}
+
+/* Gespeicherte Einträge */
+.entries-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.entry-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: left;
+}
+
+.entry {
+    background: #0e6ed4a2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 80px;
+    text-align: center;
+    font-weight: bold;
+}

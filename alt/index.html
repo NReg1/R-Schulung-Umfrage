@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nächste R Schulung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Nächste R Schulung über die apply() Funktionsfamilie:</h2>
+        <p> Soll diese wie bisher als Schulung stattfinden oder reicht auch ein Handout? </p>
+        <p> Bitte Namen eintragen und Optionen auswählen?</p>
+
+        <!-- Neue Eingabegruppe für die Felder und den Button -->
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Name eingeben">
+            <select id="option1">
+                <option value="Handout">Handout</option>
+                <option value="Schulung">Schulung</option>
+                <option value="Beides wäre okay">Beides wäre okay</option>
+            </select>
+            <p id="option2-label">Wenn Schulung dann im...</p> 
+            <select id="option2">
+                <option value="April">April</option>
+                <option value="Mai">Mai</option>
+                <option value="Beides wäre okay">Beides wäre okay</option>
+            </select>
+            <button class="save-button" onclick="addEntry()">Speichern</button>
+        </div>
+
+        <h3>Gespeicherte Einträge</h3>
+        <div id="entries" class="entries-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
