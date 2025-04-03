@@ -18,12 +18,18 @@ async function addEntry() {
         return;
     }
 
+    // Falls "Handout" ausgewählt ist, option2 NICHT speichern
+    let entryData = { name: name, option1: option1 };
+    if (option1 !== "Handout") {
+        entryData.option2 = option2;
+    }
+    
     // Daten in Supabase speichern
     const { data, error } = await supabase
         .from('RUmfrage') // Tabellenname in Supabase
-        .insert([
-            { name: name, option1: option1, option2: option2 }
-        ]);
+        //.insert([
+        //    { name: name, option1: option1, option2: option2 }
+        .insert([entryData]);
 
     if (error) {
         //console.error("Fehler beim Speichern:", error);
@@ -34,7 +40,8 @@ async function addEntry() {
     }
 
     // Eintrag in der Oberfläche anzeigen
-    displayEntry(name, option1, option2);
+    // displayEntry(name, option1, option2);
+    displayEntry(name, option1, option1 === "Handout" ? null : option2);
 
     // Eingaben zurücksetzen
     document.getElementById('name').value = '';
